@@ -13,5 +13,13 @@ public class Storage{
         amount = new ArrayList<Integer>();
         serialNumber = new ArrayList<Integer>();
     }
+
+    public void removeItem(String c){
+        for (int i=0; i<category.size(); i++){
+            if(category.get(i).equals(c)){
+                category.set(i, "null");
+            }
+        }
+    }
     
 }
