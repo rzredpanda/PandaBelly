@@ -1,4 +1,6 @@
-public class Storage{
+import java.util.ArrayList;
+
+public class Storage {
     private ArrayList<String> category;
     private ArrayList<String> name;
     private ArrayList<Double> price;
@@ -17,7 +19,7 @@ public class Storage{
     public void removeItem(String c){
         for (int i=0; i<category.size(); i++){
             if(category.get(i).equals(c)){
-                category.set(i, "null");
+                category.set(i, null);
             }
         }
     }
