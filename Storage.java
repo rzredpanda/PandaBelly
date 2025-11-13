@@ -1,28 +1,29 @@
 import java.util.ArrayList;
 
 public class Storage {
-    private ArrayList<String> category;
-    private ArrayList<String> name;
-    private ArrayList<Double> price;
-    private ArrayList<Integer> amount;
-    private ArrayList<Integer> serialNumber;
+    private ArrayList<Item> category;
+
 
 
     public Storage(){
-        category = new ArrayList<String>();
-        name = new ArrayList<String>();
-        price = new ArrayList<Double>();
-        amount = new ArrayList<Integer>();
-        serialNumber = new ArrayList<Integer>();
+        category = new ArrayList<Item>();
     }
 
-    public void removeItem(String c){
+    public void removeItem(String n){
         for (int i=0; i<category.size(); i++){
-            if(category.get(i).equals(c)){
-                category.set(i, null);
+            if(category.get(i).getName().equals(n)){
+                category.remove(i);
             }
         }
     }
+    public void removeItem(int index){
+        for (int i=0; i<category.size(); i++){
+            if(i==index){
+                category.remove(i);
+            }
+        }
+    }
+    
     
 }
 
