@@ -10,6 +10,7 @@ public class Item {
         quantity=q;
         SKU=s;
     }
+    //accessors
     public String getName(){
         return name;
     }
@@ -23,6 +24,7 @@ public class Item {
         return SKU;
     }
 
+    //setters
     public void setName(String n){
         name=n;
     }
