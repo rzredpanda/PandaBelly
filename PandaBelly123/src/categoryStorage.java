@@ -1,9 +1,9 @@
 import java.util.ArrayList;
 
-public class main{
+public class categoryStorage{
     private ArrayList<Storage> mainStorage;
 
-    public main(){
+    public categoryStorage(){
         mainStorage=new ArrayList<Storage>();
     }
     //Adds a category to the main storage if it is not already present in the list of categories
