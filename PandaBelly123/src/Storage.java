@@ -2,13 +2,15 @@ import java.util.ArrayList;
 
 public class Storage {
     private ArrayList<Item> category;
+    private String categoryName;
 
 
 
-    public Storage(){
+    public Storage(String n){
         category = new ArrayList<Item>();
+        categoryName = n;
     }
-
+    //removes an item from the category based on its name
     public boolean removeItem(String n){
         for (int i=0; i<category.size(); i++){
             if(category.get(i).getName().equals(n)){
@@ -18,6 +20,7 @@ public class Storage {
         }
         return false;
     }
+    //removes an item from the category based on its index
     public boolean removeItem(int index){
         if(index<=category.size()&&index>=0){
             for (int i=0; i<category.size(); i++){
@@ -29,7 +32,8 @@ public class Storage {
         }
         return false;
     }
-    public boolean addItem(String n, double p, int q, int s){
+    //Adds an item to the category
+    public boolean addItem(String n, double p, int q, String s){
         for(Item y:category){
             if(y.getName().equals(n)){
                 return false;
@@ -37,6 +41,10 @@ public class Storage {
         }
         category.add(new Item(n,p,q,s));
         return true;
+    }
+    //accessor method to return the category's name
+    public String getCName(){
+        return categoryName;
     }
 
     
