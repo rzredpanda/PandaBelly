@@ -5,7 +5,6 @@ public class Storage {
     private String categoryName;
 
 
-
     public Storage(String n){
         category = new ArrayList<Item>();
         categoryName = n;
@@ -40,6 +39,7 @@ public class Storage {
             }
         }
         category.add(new Item(n,p,q,s));
+        
         return true;
     }
     //accessor method to return the category's name

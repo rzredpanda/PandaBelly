@@ -1,3 +1,8 @@
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+
 import javax.swing.*;
 
 public class Main {
@@ -18,8 +23,23 @@ public class Main {
         login.addActionListener(e -> JOptionPane.showMessageDialog(frame, "Button Clicked!"));
         login.setBounds(600, 500, 150, 100);
         login.setLayout(null);
-        //button.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        JButton exitButton = new JButton("Exit");
+        frame.getContentPane().add(exitButton);
+        exitButton.addActionListener(e -> System.exit(0));
+        exitButton.setBounds(150, 200, 100, 50);
+        exitButton.setLayout(null);
 
         
     }
+
+    public void addToFile(String fileName, String textToAdd) {
+        BufferedWriter writer = null;
+        FileWriter fileWriter = new FileWriter(fileName, true);
+        writer = new BufferedWriter(fileWriter);
+        writer.write(textToAdd);
+        writer.newLine();
+        
+    }
+
 }
