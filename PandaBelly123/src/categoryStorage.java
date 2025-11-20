@@ -16,6 +16,15 @@ public class categoryStorage{
         mainStorage.add(x);
         return true;
     }
+    public boolean removeCategory(String n){
+        for(int i=0; i<mainStorage.size(); i++){
+            if(mainStorage.get(i).getCName().equals(n)){
+                mainStorage.remove(i);
+                return true;
+            }
+        }
+        return false;
+    }
 
 
 }
