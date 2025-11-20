@@ -42,6 +42,19 @@ public class Storage {
         
         return true;
     }
+
+    public boolean modifyItem(String n, String newName, double p, int q, String s){
+        for(Item y:category){
+            if(y.getName().equals(n)){
+                y.setName(newName);
+                y.setPrice(p);
+                y.setQuantity(q);
+                y.setSKU(s);
+                return true;
+            }
+        }
+        return false;
+    }
     //accessor method to return the category's name
     public String getCName(){
         return categoryName;
