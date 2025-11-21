@@ -13,32 +13,15 @@ public class Main {
         JFrame frame = new JFrame("PandaBelly");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(1000, 700);    
+
+        String[] options = {"Option 1", "Option 2", "Option 3"};
+        JComboBox<String> dropdown = new JComboBox<>(options);
         
-
-
-
-        /**READ THIS TEXT: We plan to have the front page just open to the table, and one of the buttons should be a drop down
-        menu of all the categories.
-        **/
-        JButton button = new JButton("Click Me");
-        button.setBounds(50,100,95,30);
-        button.setSize(100,100);
-
-        String[] categories = {"Fruits", "Vegetables", "Dairy", "Bakery", "Meat"};
-        JComboBox<String> categoryList = new JComboBox<String>(categories);
-        categoryList.setBounds(50,50,100,30);
-        categoryList.setSize(100, 30);
-        
-
-        categoryList.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                String selectedCategory = (String) categoryList.getSelectedItem();
-                button.setText("Selected: " + selectedCategory);
-            }
-        });
-        frame.add(categoryList);
+        JPanel panel = new JPanel();
+        panel.add(dropdown);
+        frame.add(panel);
         frame.setVisible(true);
+       
     }
 
     // public void addToFile(String fileName, String textToAdd) {
