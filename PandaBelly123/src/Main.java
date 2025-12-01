@@ -19,7 +19,26 @@ public class Main {
         
         JPanel panel = new JPanel();
         panel.add(dropdown);
+        panel.setBounds(50,150,200,50);
         frame.add(panel);
+        
+
+        JButton addCategoryButton = new JButton("Add Category");
+        JPanel buttonPanel = new JPanel();
+        buttonPanel.setBounds(300,300,200,50);
+        buttonPanel.add(addCategoryButton);
+        frame.add(buttonPanel);
+        addCategoryButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String newCategory = JOptionPane.showInputDialog(frame, "Enter new category name:");
+                if (newCategory != null && !newCategory.trim().isEmpty()) {
+                    dropdown.addItem(newCategory.trim());
+                    // Here you would also add code to save the new category to a file
+                }
+            }
+        });
+
         frame.setVisible(true);
        
     }
