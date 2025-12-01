@@ -37,9 +37,16 @@ public class Main {
                     // Here you would also add code to save the new category to a file
                 }
             }
+
+
+
+        
         });
 
         frame.setVisible(true);
+       
+
+
        
     }
 
