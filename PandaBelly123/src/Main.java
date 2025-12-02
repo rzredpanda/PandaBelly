@@ -5,6 +5,8 @@ import java.io.IOException;
 import java.util.Scanner;
 
 import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -42,6 +44,17 @@ public class Main {
 
         
         });
+        /* 
+        DefaultTableModel model = new DefaultTableModel(data, columnNames);
+        JTable table = new JTable(model);
+        table.setRowHeight(30);
+
+        // Wrap the table in a JScrollPane to display headers and enable scrolling
+        JScrollPane scrollPane = new JScrollPane(table);
+
+        // Add the scroll pane to the frame's content pane
+        frame.add(scrollPane, BorderLayout.CENTER);
+*/
 
         frame.setVisible(true);
        
