@@ -37,7 +37,7 @@ public class Main {
         bigPanel.setBounds(500, 350, 600, 400);
         frame.add(bigPanel);
         bigPanel.setBorder(BorderFactory.createTitledBorder("Items"));
-        bigPanel.setBackground(java.awt.Color.LIGHT_GRAY);
+        bigPanel.setBackground(java.awt.Color.PINK);
 
 
         JButton addCategoryButton = new JButton("Add Category");
