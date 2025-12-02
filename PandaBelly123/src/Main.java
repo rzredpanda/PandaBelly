@@ -34,7 +34,7 @@ public class Main {
         frame.add(panel);
 
         JPanel bigPanel = new JPanel();
-        bigPanel.setBounds(500, 350, 600, 400);
+        bigPanel.setBounds(100, 100, 600, 400);
         frame.add(bigPanel);
         bigPanel.setBorder(BorderFactory.createTitledBorder("Items"));
         bigPanel.setBackground(java.awt.Color.PINK);
