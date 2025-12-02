@@ -5,6 +5,9 @@ import java.io.IOException;
 import java.util.Scanner;
 import java.awt.Dimension;
 import java.awt.Toolkit;
+import java.awt.Color;
+import javax.swing.BorderFactory;
+
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
@@ -30,12 +33,20 @@ public class Main {
         panel.setBounds(175,50,200,50);
         frame.add(panel);
 
+        JPanel bigPanel = new JPanel();
+        bigPanel.setBounds(500, 350, 600, 400);
+        frame.add(bigPanel);
+        bigPanel.setBorder(BorderFactory.createTitledBorder("Items"));
+        bigPanel.setBackground(java.awt.Color.LIGHT_GRAY);
+
 
         JButton addCategoryButton = new JButton("Add Category");
         JPanel buttonPanel = new JPanel();
         buttonPanel.setBounds(375,50,200,50);
         buttonPanel.add(addCategoryButton);
         frame.add(buttonPanel);
+        //addCategoryButton.setfocusable(false);
+
         addCategoryButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
