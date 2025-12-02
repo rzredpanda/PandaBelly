@@ -91,6 +91,27 @@ public class Main {
                 }
             }
         });
+
+
+
+        JButton addcategory = new JButton("Add Category");
+        JPanel addcategoryPanel = new JPanel();
+        addcategoryPanel.setBounds(400,50,200,50);
+        addcategoryPanel.add(addcategory);
+        frame.add(addcategoryPanel);
+        addcategory.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String selectedCategory = JOptionPane.showInputDialog(frame, "Enter category name to remove:");
+                if (selectedCategory != null && !selectedCategory.trim().isEmpty()) {
+                    dropdown.removeItem(selectedCategory.trim());
+                    // Here you would also add code to save the removed category to a file
+                }
+            }
+        });
+
+
+
         frame.setVisible(true);
        
 
