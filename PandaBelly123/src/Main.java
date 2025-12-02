@@ -24,28 +24,35 @@ public class Main {
         frame.setLayout(null);
         frame.setSize(1000,700);
         frame.setLocationRelativeTo(null); // Center the frame
+        frame.setBackground(java.awt.Color.BLUE);
         
         String[] options = {"Option 1", "Option 2", "Option 3"};
         JComboBox<String> dropdown = new JComboBox<>(options);
-
+        
         JPanel panel = new JPanel();
         panel.add(dropdown);
         panel.setBounds(175,50,200,50);
         frame.add(panel);
 
         JPanel bigPanel = new JPanel();
-        bigPanel.setBounds(100, 100, 600, 400);
+        bigPanel.setBounds(150, 100, 700, 550);
         frame.add(bigPanel);
-        bigPanel.setBorder(BorderFactory.createTitledBorder("Items"));
+        bigPanel.setBorder(BorderFactory.createEtchedBorder());
         bigPanel.setBackground(java.awt.Color.PINK);
+
+        JPanel itemPanel = new JPanel();
+        itemPanel.setSize(175, 100);
+        itemPanel.setBorder(BorderFactory.createEtchedBorder());
+        bigPanel.add(itemPanel);
+        
+        itemPanel.setBackground(java.awt.Color.WHITE);
 
 
         JButton addCategoryButton = new JButton("Add Category");
         JPanel buttonPanel = new JPanel();
         buttonPanel.setBounds(375,50,200,50);
         buttonPanel.add(addCategoryButton);
-        frame.add(buttonPanel);
-        //addCategoryButton.setfocusable(false);
+
 
         addCategoryButton.addActionListener(new ActionListener() {
             @Override
