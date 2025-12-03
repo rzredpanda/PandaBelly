@@ -48,22 +48,6 @@ public class Main {
         itemPanel.setBackground(java.awt.Color.WHITE);
 
 
-        JButton addCategoryButton = new JButton("Add Category");
-        JPanel buttonPanel = new JPanel();
-        buttonPanel.setBounds(375,50,200,50);
-        buttonPanel.add(addCategoryButton);
-
-
-        addCategoryButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                String newCategory = JOptionPane.showInputDialog(frame, "Enter new category name:");
-                if (newCategory != null && !newCategory.trim().isEmpty()) {
-                    dropdown.addItem(newCategory.trim());
-                    // Here you would also add code to save the new category to a file
-                }
-            }
-        });
         /* 
         DefaultTableModel model = new DefaultTableModel(data, columnNames);
         JTable table = new JTable(model);
@@ -102,10 +86,10 @@ public class Main {
         addcategory.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String selectedCategory = JOptionPane.showInputDialog(frame, "Enter category name to remove:");
-                if (selectedCategory != null && !selectedCategory.trim().isEmpty()) {
-                    dropdown.removeItem(selectedCategory.trim());
-                    // Here you would also add code to save the removed category to a file
+                String newCategory = JOptionPane.showInputDialog(frame, "Enter new category name:");
+                if (newCategory != null && !newCategory.trim().isEmpty()) {
+                    dropdown.addItem(newCategory.trim());
+                    // Here you would also add code to save the new category to a file
                 }
             }
         });
@@ -116,7 +100,6 @@ public class Main {
        
 
 
-       
     }
 
     // public void addToFile(String fileName, String textToAdd) {
