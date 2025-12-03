@@ -105,6 +105,12 @@ public class Main {
 
 
     }
+    /*Arthur: For the file stuff, we can use special characters to act as keys to separate different items and stuff
+    for example, we can use %% or something to separate items, and categories by &&
+    so maybe the first line of the txt is just a list of categories like balls&&cubes&&blahblah
+    and then the next lines each individual item with the first part being the category it belongs to
+    like balls%%red ball%%5%%$10.00%%SKUBLAHBLAHBLAH
+     */
 
     // public void addToFile(String fileName, String textToAdd) {
     //     BufferedWriter writer = null;
