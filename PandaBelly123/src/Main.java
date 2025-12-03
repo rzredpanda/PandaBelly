@@ -26,7 +26,7 @@ public class Main {
         frame.setLocationRelativeTo(null); // Center the frame
         frame.setBackground(java.awt.Color.BLUE);
         
-        String[] options = {"Option 1", "Option 2", "Option 3"};
+        String[] options = {"None"};
         JComboBox<String> dropdown = new JComboBox<>(options);
         
         JPanel panel = new JPanel();
@@ -69,6 +69,10 @@ public class Main {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String selectedCategory = JOptionPane.showInputDialog(frame, "Enter category name to remove:");
+                if(selectedCategory.equals("None")){
+                    JOptionPane.showMessageDialog(frame, "Cannot remove 'None' category.");
+                    return;
+                }
                 if (selectedCategory != null && !selectedCategory.trim().isEmpty()) {
                     dropdown.removeItem(selectedCategory.trim());
                     // Here you would also add code to save the removed category to a file
